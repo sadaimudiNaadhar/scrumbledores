@@ -149,7 +149,7 @@
           </div>
 
         </div>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5" id="int" style="display: block;">
 
           <input type="text" placeholder="Your Answer" class="form-control" id="answer" />
           <button type="button" class="btn btn-primary btn-lg px-4 me-md-4" onclick=" check()">Check</button>
@@ -230,10 +230,12 @@
     function check() {
       let answer = $("#answer").val()
       var x = document.getElementById("afterAns");
+      var y = document.getElementById("int");
 
       if (answer == "1") {
 
         x.style.display = "block";
+        y.style.display = "none";
         x.scrollIntoView();
         //return location.href = "second-riddle.html"
       }

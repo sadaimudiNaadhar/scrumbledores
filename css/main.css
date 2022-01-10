@@ -45,7 +45,7 @@ body{
 }
 .dmx3DFlipGallery h4{
 	text-align: center;
-	font-family: 'Quintessential', cursive;
+	font-family: 'Harry Potter', cursive;
 }
 .dmx3DFlipPhotoBack{
 	background: url(../images/flip-back.jpg) no-repeat top left;
@@ -213,7 +213,7 @@ header nav{
 	border-bottom:1px solid #ccc;
 }
 #info article h2{
-	font-family: 'Quintessential', cursive;
+	font-family: 'Harry Potter', cursive;
 	font-size:21px;
 	margin-bottom: 5px;
 	text-align:center;
@@ -241,3 +241,6 @@ header nav{
     padding: 5px 10px;
 }
 
+.font-harry{
+	font-family: 'Harry Potter', cursive;
+}

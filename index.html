@@ -119,7 +119,7 @@
       </div>
     </div>
   </section>
-  <section></section>
+
   <section id="p1-content" class="fademe" style="opacity: 0;">
     <div class="text-light px-4 pt-5 my-5 text-center border-bottom">
       <h1 class="display-4 fw-bold font-harry">Faders Dorf</h1>
@@ -138,14 +138,27 @@
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
 
           <input type="text" placeholder="Your Answer" class="form-control" id="answer" />
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-4">Check</button>
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-4" onclick=" check()">Check</button>
         </div>
+
+
       </div>
 
     </div>
-    <br style="clear: both" />
+
+
   </section>
 
+  <div class="col-md-12">
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Well done!</h4>
+      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so
+        that you can see how spacing within an alert works with this kind of content.</p>
+      <hr>
+      <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    </div>
+
+  </div>
 
   <script>
 
@@ -209,6 +222,16 @@
 
     });
 
+    function check() {
+      let answer = $("#answer").val()
+
+      if (answer == "abcd") {
+
+        //return location.href = "second-riddle.html"
+      }
+
+      alert()
+    }
   </script>
 
 </body>

@@ -6,16 +6,6 @@
 }
 
 /* Loading Screen */
-.dmx3DFlipGalleryLoading {
-	background-image: url(dmx3DFlipGalleryLoader.gif);
-	background-position: center center;
-	background-repeat: no-repeat;
-}
-
-/* Hide all photos on loading */
-.dmx3DFlipGalleryLoading .dmx3DFlipPhoto {
-	visibility: hidden;
-}
 
 /* Fixes mozilla anti-aliasing bug */
 .dmx3DFlipPhotoFront, .dmx3DFlipPhotoBack {

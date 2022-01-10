@@ -136,6 +136,9 @@
 
           Your 8 Books Stand Next To Each Other On A Shelf. To Buy All The Books You Need To Solve The Next Puzzle.</p>
 
+        <div class="row">
+          <img src="images/p1.png" alt="note">
+        </div>
         <div class="text-light px-4 pt-5 my-5 text-center" id="afterAns" style="display: none;">
           <h1 class="display-4 fw-bold font-harry"></h1>
           <div class="col-lg-6 mx-auto">
@@ -149,18 +152,19 @@
           </div>
 
         </div>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5" id="int" style="display: block;">
-
-          <input type="text" placeholder="Your Answer" class="form-control" id="answer" />
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-4" onclick=" check()">Check</button>
+        <div class="row mb-5" id="anscheck">
+          <div class="col-md-8">
+            <input type="text" placeholder="Your Answer" class="form-control" id="answer" />
+          </div>
+          <div class="col-md-2">
+            <button type="button" class="btn btn-primary   me-md-4" onclick=" check()">Check</button>
+          </div>
         </div>
-
-
       </div>
 
   </section>
 
-
+  <br style="clear: both" />
 
 
 
@@ -230,12 +234,11 @@
     function check() {
       let answer = $("#answer").val()
       var x = document.getElementById("afterAns");
-      var y = document.getElementById("int");
 
       if (answer == "1") {
 
         x.style.display = "block";
-        y.style.display = "none";
+        $("#anscheck").hide()
         x.scrollIntoView();
         //return location.href = "second-riddle.html"
       }
@@ -247,7 +250,7 @@
       }
     }
 
-    
+
   </script>
 
 </body>

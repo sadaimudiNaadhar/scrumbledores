@@ -135,6 +135,20 @@
           Hogwarts Letter And Search For The Books.
 
           Your 8 Books Stand Next To Each Other On A Shelf. To Buy All The Books You Need To Solve The Next Puzzle.</p>
+
+        <div class="text-light px-4 pt-5 my-5 text-center" id="afterAns" style="display: none;">
+          <h1 class="display-4 fw-bold font-harry"></h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4"> Hurrayy !! You found the correct book order. Now you have all your books. Now it’s
+              time
+              for the Quidditch Tournament.
+            </p>
+            <button type="button" class="btn btn-success btn-lg px-4 me-md-4" onclick="window.location.href='#'">Next
+              Riddle</button>
+            <!-- </div> -->
+          </div>
+
+        </div>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
 
           <input type="text" placeholder="Your Answer" class="form-control" id="answer" />
@@ -144,21 +158,12 @@
 
       </div>
 
-    </div>
-
-
   </section>
 
-  <div class="col-md-12">
-    <div class="alert alert-success" role="alert">
-      <h4 class="alert-heading">Well done!</h4>
-      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so
-        that you can see how spacing within an alert works with this kind of content.</p>
-      <hr>
-      <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-    </div>
 
-  </div>
+
+
+
 
   <script>
 
@@ -224,14 +229,23 @@
 
     function check() {
       let answer = $("#answer").val()
+      var x = document.getElementById("afterAns");
 
-      if (answer == "abcd") {
+      if (answer == "1") {
 
+        x.style.display = "block";
+        x.scrollIntoView();
         //return location.href = "second-riddle.html"
       }
+      else {
 
-      alert()
+        x.style.display = "none";
+
+        alert()
+      }
     }
+
+    
   </script>
 
 </body>

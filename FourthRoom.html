@@ -37,11 +37,7 @@
             </div>
             <div class="dmx3DFlipPhotoBack">
               <h4>George Weasley</h4>
-              <p>But I was able to ascertain the following
-                from her clues:
-                (1) Equipment is hidden in the image.
-                (2) Your Job is to find equipment. (You know how to fly?? Right)
-              </p>
+              <p>George Weasley was a pure-blood wizard, son of Arthur Weasley and Molly Weasley.</p>
             </div>
           </div>
         </div>
@@ -126,37 +122,38 @@
 
   <section id="p1-content" class="fademe" style="opacity: 0;">
     <div class="text-light px-4 pt-5 my-5 text-center border-bottom">
-      <h1 class="display-4 fw-bold font-harry">Quidditch Tournament</h1>
+      <h1 class="display-4 fw-bold font-harry">Biwizard competition</h1>
       <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Quidditch Tournament is an international Quidditch Tournament held every four years. The
-          first Quidditch Tournament was held in 1473,
-          with the final match being Transylvania v Flanders (PS11, QA8). Everyone is excited for the Tournament.
-          Wait!! Something has happened in the Tournament. Tournament has been paused because someone has stolen the
-          snitch used in Hogwarts Quidditch game. Who has stolen the snitch?? A group of boys and girls whispered
-          something and you overheard their conversation that Peeves had stolen and locked up the Hogwarts Quidditch
-          game snitch.
-          The Grey Lady (the ghost of Ravenclaw) witnessed Peeves’ sabotage attempts. Sadly, she loves her
-          riddles and refused to tell me how to get the stolen snitch,
-          All Quidditch practices, scrimmages, and games are hereby suspended until the equipment can be recovered.
-          As members of your house Quidditch team, it is your responsibility to help recover the snitch.
+        <p class="lead mb-4">It’s Now time for the great Biwizard competition.
+          In this Biwizard Competition you need to complete two tasks in order to be the Champion.
 
-          Arrange the first letter of all equipment names in alphabetical Order. This is your key to pass this puzzle.
+          Professor Crouch hands you over a bag to choose smaller representations of dragons, and the similar Real
+          dragons will be guarding their eggs,
+          He instructs: “Your Objective is simple, to collect the Golden Egg; this you must do for each egg contains a
+          clue without which you cannot hope to proceed to the next task”
+
+          You need to find the Golden Egg hidden in the mountains guarded by Dragons
+          Follow the directions given below, wrong mountain and the Dragon kills you!!
+
         </p>
         <div class="row">
-          <img src="images/p2.png" alt="note">
+          <img src="images/p5.png" alt="note">
         </div>
-        <p> <br><b>What is the alphabetical order of equipment names?</b> </p><br>
+        <p> <br><b>Start at 4.8, Go three mountains right downwards, go three mountains left, go two mountains right
+            upwards, go two mountains left upwards, go three mountains right upwards
+          </b> </p><br>
 
 
         <div class="text-light px-4 pt-5 my-5 text-center" id="afterAns" style="display: none;">
           <h1 class="display-4 fw-bold font-harry"></h1>
           <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4"> Good job! You found the hidden snitch and broomstick. Now you can play the Quidditch
-              tournament along with your teammates.
-              After the Quidditch tournament, it is now time to study.
-
+            <p class="lead mb-4"> Congratulations!! That was one crazy ride. The Golden Egg you collected has a clue for
+              your next task in the Biwizard Competition
+              You try to open the egg, but there is an unpleasant sound coming out of it.
+              With the help of a friend you get to know that the egg needs to be opened under water in order to hear the
+              clue.
             </p>
-            <button type="button" class="btn btn-success btn-lg px-4 me-md-4" onclick="window.location.href='\ThirdRoom.html'">Next
+            <button type="button" class="btn btn-success btn-lg px-4 me-md-4" onclick="window.location.href='\FifthRoom1.html'">Next
               Riddle</button>
             <!-- </div> -->
           </div>
@@ -245,19 +242,12 @@
       var x = document.getElementById("afterAns");
       var y = document.getElementById("int");
 
-      if (answer == "BG") {
+      if (answer == "2.3") {
 
         x.style.display = "block";
         y.style.display = "none";
         x.scrollIntoView();
         //return location.href = "second-riddle.html"
-      }
-      else if (answer == "bg") {
-
-        x.style.display = "block";
-        y.style.display = "none";
-        x.scrollIntoView();
-
       }
       else {
 

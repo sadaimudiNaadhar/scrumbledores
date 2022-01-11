@@ -37,11 +37,7 @@
             </div>
             <div class="dmx3DFlipPhotoBack">
               <h4>George Weasley</h4>
-              <p>But I was able to ascertain the following
-                from her clues:
-                (1) Equipment is hidden in the image.
-                (2) Your Job is to find equipment. (You know how to fly?? Right)
-              </p>
+              <p>George Weasley was a pure-blood wizard, son of Arthur Weasley and Molly Weasley.</p>
             </div>
           </div>
         </div>
@@ -126,37 +122,31 @@
 
   <section id="p1-content" class="fademe" style="opacity: 0;">
     <div class="text-light px-4 pt-5 my-5 text-center border-bottom">
-      <h1 class="display-4 fw-bold font-harry">Quidditch Tournament</h1>
+      <h1 class="display-4 fw-bold font-harry">Guess The Professor </h1>
       <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Quidditch Tournament is an international Quidditch Tournament held every four years. The
-          first Quidditch Tournament was held in 1473,
-          with the final match being Transylvania v Flanders (PS11, QA8). Everyone is excited for the Tournament.
-          Wait!! Something has happened in the Tournament. Tournament has been paused because someone has stolen the
-          snitch used in Hogwarts Quidditch game. Who has stolen the snitch?? A group of boys and girls whispered
-          something and you overheard their conversation that Peeves had stolen and locked up the Hogwarts Quidditch
-          game snitch.
-          The Grey Lady (the ghost of Ravenclaw) witnessed Peeves’ sabotage attempts. Sadly, she loves her
-          riddles and refused to tell me how to get the stolen snitch,
-          All Quidditch practices, scrimmages, and games are hereby suspended until the equipment can be recovered.
-          As members of your house Quidditch team, it is your responsibility to help recover the snitch.
-
-          Arrange the first letter of all equipment names in alphabetical Order. This is your key to pass this puzzle.
+        <p class="lead mb-4">You hear the news that there is a new Professor appointed for the subject commonly known as
+          D.A.D.A. He is a famous Auror in the Wizarding World who is single-handedly responsible for capturing numerous
+          wizard criminals. He is also said never to have killed his quarry, even when permitted to do so, unless he had
+          no other choice. His face is badly scarred; he has lost several body parts while fighting wizards, including
+          his left eye, lower left leg, and part of his nose; and he is cautious – some might say paranoid – in that he
+          refuses to eat or drink anything which he himself did not prepare.
         </p>
         <div class="row">
-          <img src="images/p2.png" alt="note">
+          <img src="images/p4.png" alt="note">
         </div>
-        <p> <br><b>What is the alphabetical order of equipment names?</b> </p><br>
+        <p> <br><b>Who is the new Professor?
+            Can you guess it from the note below?
+          </b> </p><br>
 
 
         <div class="text-light px-4 pt-5 my-5 text-center" id="afterAns" style="display: none;">
           <h1 class="display-4 fw-bold font-harry"></h1>
           <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4"> Good job! You found the hidden snitch and broomstick. Now you can play the Quidditch
-              tournament along with your teammates.
-              After the Quidditch tournament, it is now time to study.
+            <p class="lead mb-4"> Great! Professor Moody is one of the best teachers to teach Defence Against
+              Dark Arts, you can learn many spells to fight against the bad wizards.
 
             </p>
-            <button type="button" class="btn btn-success btn-lg px-4 me-md-4" onclick="window.location.href='\ThirdRoom.html'">Next
+            <button type="button" class="btn btn-success btn-lg px-4 me-md-4" onclick="window.location.href='\FourthRoom.html'">Next
               Riddle</button>
             <!-- </div> -->
           </div>
@@ -245,19 +235,12 @@
       var x = document.getElementById("afterAns");
       var y = document.getElementById("int");
 
-      if (answer == "BG") {
+      if (answer == "Alastor Mad Eye Moody") {
 
         x.style.display = "block";
         y.style.display = "none";
         x.scrollIntoView();
         //return location.href = "second-riddle.html"
-      }
-      else if (answer == "bg") {
-
-        x.style.display = "block";
-        y.style.display = "none";
-        x.scrollIntoView();
-
       }
       else {
 

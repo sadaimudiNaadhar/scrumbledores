@@ -39,7 +39,7 @@
               <h4>George Weasley</h4>
               <p>Equipment is hidden in the image.
                 Your Job is to find equipment. (You know how to fly?? Right)
-                </p>
+              </p>
             </div>
           </div>
         </div>
@@ -77,7 +77,10 @@
             </div>
             <div class="dmx3DFlipPhotoBack">
               <h4>Harry Potter</h4>
-              <p>Harry James Potter was a half-blood wizard, the only child and son of James Potter and Lily Potter</p>
+              <p> This object literally trans-Port you to another place. And you can Rearrange the words to find the
+                answer it ends with ‘ KEY ’
+
+              </p>
             </div>
           </div>
         </div>
@@ -124,37 +127,43 @@
 
   <section id="p1-content" class="fademe" style="opacity: 0;">
     <div class="text-light px-4 pt-5 my-5  border-bottom">
-      <h1 class="display-4 fw-bold text-center font-harry">Faders Dorf</h1>
+      <h1 class="display-4 fw-bold text-center font-harry">Triwizard Competition </h1><br>
+      <h3 class="display-4 fw-bold text-center font-harry">Escape the Maze along with Cedric
+      </h3><br>
       <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4 text-md-left">Quidditch Tournament is an international Quidditch Tournament held every four years. The
-          first Quidditch Tournament was held in 1473, with the final match being Transylvania v Flanders (PS11, QA8).
-          Everyone is excited for the Tournament. Wait!! Something has happened in the Tournament. Tournament has been
-          paused because someone has stolen the snitch used in Hogwarts Quidditch game. Who has stolen the snitch?? A
-          group of boys and girls whispered something and you overheard their conversation that Peeves had stolen and
-          locked up the Hogwarts Quidditch game snitch.<br></p>
+        <p class="lead mb-4 text-md-left">That was a correct guess! You find Cedric trapped behind the door and now you
+          have rescued him
+          But you still need to find the Wizard Cup and Escape from this maze along with Cedric
 
-          <p class="lead mb-4 text-md-left"> All Quidditch practices, scrimmages, and games are hereby suspended until the equipment can be recovered. As
-          members of your house Quidditch team, it is your responsibility to help recover the snitch.
+          <br>
+        </p>
+        <p class="lead mb-4 text-md-left"><b><i> “The Wizard cup is not any ordinary object but it is magically
+              enchanted.
+              This bewitched cup can transport you to a safe place out of this labyrinth”
 
-          <p class="lead mb-4 text-md-left"> The Grey Lady (the ghost of Ravenclaw) witnessed Peeves’ sabotage attempts. Sadly, she loves her riddles and
-          refused to tell me how to get the stolen snitch.
-
-          <p class="lead mb-4 text-md-left"> Arrange the first letter of all equipment names in alphabetical Order. This is your key to pass this puzzle.
-
+            </i> </b>
+        </p>
+        <p class="lead mb-4 text-md-left"> Go through the letters hidden in the maze to find the correct word that will
+          lead you to the Wizard cup and finally you can escape.
         </p>
 
+        <p class="lead mb-4 text-md-left"><b> What is the correct word that leads you to the Wizard Cup?
+
+          </b></p>
+
+
+
         <div class="row">
-          <img src="images/p2.png" alt="note">
+          <img src="images/p6.png" alt="note" height="800px" width="700px">
         </div>
         <div class="text-light px-4 pt-5 my-5 text-center" id="afterAns" style="display: none;">
           <h1 class="display-4 fw-bold font-harry"></h1>
           <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4"> Good job! You found the hidden snitch and broomstick. Now you can play the Quidditch
-              tournament along with your teammates.
-              After the Quidditch tournament, it is now time to study.
+            <p class="lead mb-4">
 
             </p>
-            <button type="button" class="btn btn-success btn-lg px-4 me-md-4" onclick="window.location.href='\rriddle-3.html'">Next
+            <button type="button" class="btn btn-success btn-lg px-4 me-md-4"
+              onclick="window.location.href='\rriddle-5-3.html'">Next
               Riddle</button>
             <!-- </div> -->
           </div>
@@ -172,11 +181,11 @@
       </div>
 
 
-      
+
     </div>
-    
-    <button type="button" class="float"onclick=" Hint()">?</button>
-      <!-- <i class="s"></i>
+
+    <button type="button" class="float" onclick=" Hint()">?</button>
+    <!-- <i class="s"></i>
       </a> -->
   </section>
 
@@ -186,7 +195,7 @@
 
   <script>
 
-    
+
 
     $(document).ready(function () {
 
@@ -252,7 +261,7 @@
       let answer = $("#answer").val()
       var x = document.getElementById("afterAns");
 
-      if (answer == "bg") {
+      if (answer == "portkey") {
 
         x.style.display = "block";
         $("#anscheck").hide()
@@ -269,7 +278,7 @@
 
     function Hint() {
 
-      alert("Ask George Weasley")
+      alert("Ask Harry Potter")
     }
   </script>
 

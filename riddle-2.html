@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/dmx3DFlipGallery.css" />
   <link rel="stylesheet" href="css/main.css" type="text/css" />
 
-  <link href="http://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
 
   <script type="text/javascript" src="js/jquery-latest.pack.js"></script>
   <script type="text/javascript" src="js/dmx3DFlipGallery.js"></script>
@@ -37,7 +37,9 @@
             </div>
             <div class="dmx3DFlipPhotoBack">
               <h4>George Weasley</h4>
-              <p>George Weasley was a pure-blood wizard, son of Arthur Weasley and Molly Weasley.</p>
+              <p>Equipment is hidden in the image.
+                Your Job is to find equipment. (You know how to fly?? Right)
+                </p>
             </div>
           </div>
         </div>
@@ -121,61 +123,70 @@
   </section>
 
   <section id="p1-content" class="fademe" style="opacity: 0;">
-    <div class="text-light px-4 pt-5 my-5 text-center border-bottom">
-      <h1 class="display-4 fw-bold font-harry">Biwizard competition</h1>
+    <div class="text-light px-4 pt-5 my-5  border-bottom">
+      <h1 class="display-4 fw-bold text-center font-harry">Faders Dorf</h1>
       <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">It’s Now time for the great Biwizard competition.
-          In this Biwizard Competition you need to complete two tasks in order to be the Champion.
+        <p class="lead mb-4 text-md-left">Quidditch Tournament is an international Quidditch Tournament held every four years. The
+          first Quidditch Tournament was held in 1473, with the final match being Transylvania v Flanders (PS11, QA8).
+          Everyone is excited for the Tournament. Wait!! Something has happened in the Tournament. Tournament has been
+          paused because someone has stolen the snitch used in Hogwarts Quidditch game. Who has stolen the snitch?? A
+          group of boys and girls whispered something and you overheard their conversation that Peeves had stolen and
+          locked up the Hogwarts Quidditch game snitch.<br></p>
 
-          Professor Crouch hands you over a bag to choose smaller representations of dragons, and the similar Real
-          dragons will be guarding their eggs,
-          He instructs: “Your Objective is simple, to collect the Golden Egg; this you must do for each egg contains a
-          clue without which you cannot hope to proceed to the next task”
+          <p class="lead mb-4 text-md-left"> All Quidditch practices, scrimmages, and games are hereby suspended until the equipment can be recovered. As
+          members of your house Quidditch team, it is your responsibility to help recover the snitch.
 
-          You need to find the Golden Egg hidden in the mountains guarded by Dragons
-          Follow the directions given below, wrong mountain and the Dragon kills you!!
+          <p class="lead mb-4 text-md-left"> The Grey Lady (the ghost of Ravenclaw) witnessed Peeves’ sabotage attempts. Sadly, she loves her riddles and
+          refused to tell me how to get the stolen snitch.
+
+          <p class="lead mb-4 text-md-left"> Arrange the first letter of all equipment names in alphabetical Order. This is your key to pass this puzzle.
 
         </p>
+
         <div class="row">
-          <img src="images/p5.png" alt="note">
+          <img src="images/p2.png" alt="note">
         </div>
-        <p> <br><b>Start at 4.8, Go three mountains right downwards, go three mountains left, go two mountains right
-            upwards, go two mountains left upwards, go three mountains right upwards
-          </b> </p><br>
-
-
         <div class="text-light px-4 pt-5 my-5 text-center" id="afterAns" style="display: none;">
           <h1 class="display-4 fw-bold font-harry"></h1>
           <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4"> Congratulations!! That was one crazy ride. The Golden Egg you collected has a clue for
-              your next task in the Biwizard Competition
-              You try to open the egg, but there is an unpleasant sound coming out of it.
-              With the help of a friend you get to know that the egg needs to be opened under water in order to hear the
-              clue.
+            <p class="lead mb-4"> Good job! You found the hidden snitch and broomstick. Now you can play the Quidditch
+              tournament along with your teammates.
+              After the Quidditch tournament, it is now time to study.
+
             </p>
-            <button type="button" class="btn btn-success btn-lg px-4 me-md-4" onclick="window.location.href='\FifthRoom1.html'">Next
+            <button type="button" class="btn btn-success btn-lg px-4 me-md-4" onclick="window.location.href='\rriddle-3.html'">Next
               Riddle</button>
             <!-- </div> -->
           </div>
 
         </div>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5" id="int" style="display: block;">
-
-          <input type="text" placeholder="Your Answer" class="form-control" id="answer" />
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-4" onclick=" check()">Check</button>
+        <br>
+        <div class="row mb-5 justify-content-sm-center" id="anscheck">
+          <div class="col-md-8">
+            <input type="text" placeholder="Your Answer" class="form-control" id="answer" />
+          </div>
+          <div class="col-md-2">
+            <button type="button" class="btn btn-primary   me-md-4" onclick=" check()">Check</button>
+          </div>
         </div>
-
-
       </div>
 
+
+      
+    </div>
+    
+    <button type="button" class="float"onclick=" Hint()">?</button>
+      <!-- <i class="s"></i>
+      </a> -->
   </section>
 
-
-
+  <br style="clear: both" />
 
 
 
   <script>
+
+    
 
     $(document).ready(function () {
 
@@ -240,12 +251,11 @@
     function check() {
       let answer = $("#answer").val()
       var x = document.getElementById("afterAns");
-      var y = document.getElementById("int");
 
-      if (answer == "2.3") {
+      if (answer == "bg") {
 
         x.style.display = "block";
-        y.style.display = "none";
+        $("#anscheck").hide()
         x.scrollIntoView();
         //return location.href = "second-riddle.html"
       }
@@ -257,7 +267,10 @@
       }
     }
 
+    function Hint() {
 
+      alert("Ask George Weasley")
+    }
   </script>
 
 </body>

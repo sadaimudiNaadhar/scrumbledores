@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/dmx3DFlipGallery.css" />
   <link rel="stylesheet" href="css/main.css" type="text/css" />
 
-  <link href="http://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
 
   <script type="text/javascript" src="js/jquery-latest.pack.js"></script>
   <script type="text/javascript" src="js/dmx3DFlipGallery.js"></script>
@@ -37,7 +37,9 @@
             </div>
             <div class="dmx3DFlipPhotoBack">
               <h4>George Weasley</h4>
-              <p>George Weasley was a pure-blood wizard, son of Arthur Weasley and Molly Weasley.</p>
+              <p>Equipment is hidden in the image.
+                Your Job is to find equipment. (You know how to fly?? Right)
+              </p>
             </div>
           </div>
         </div>
@@ -75,7 +77,10 @@
             </div>
             <div class="dmx3DFlipPhotoBack">
               <h4>Harry Potter</h4>
-              <p>Harry James Potter was a half-blood wizard, the only child and son of James Potter and Lily Potter</p>
+              <p> This object literally trans-Port you to another place. And you can Rearrange the words to find the
+                answer it ends with ‘ KEY ’
+
+              </p>
             </div>
           </div>
         </div>
@@ -121,57 +126,76 @@
   </section>
 
   <section id="p1-content" class="fademe" style="opacity: 0;">
-    <div class="text-light px-4 pt-5 my-5 text-center border-bottom">
-      <h1 class="display-4 fw-bold font-harry">Find Cedric</h1>
+    <div class="text-light px-4 pt-5 my-5  border-bottom">
+      <h1 class="display-4 fw-bold text-center font-harry">Triwizard Competition </h1><br>
+      <h3 class="display-4 fw-bold text-center font-harry">Escape the Maze along with Cedric
+      </h3><br>
       <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">That was a correct guess! You find Cedric trapped behind the door and now you have rescued
-          him
+        <p class="lead mb-4 text-md-left">That was a correct guess! You find Cedric trapped behind the door and now you
+          have rescued him
           But you still need to find the Wizard Cup and Escape from this maze along with Cedric
 
-          “The Wizard cup is not any ordinary object but it is magically enchanted.
-          This bewitched cup can transport you to a safe place out of this labyrinth”
-
-          Go through the letters hidden in the maze to find the correct word that will lead you to the Wizard cup and
-          finally you can escape
-
+          <br>
         </p>
+        <p class="lead mb-4 text-md-left"><b><i> “The Wizard cup is not any ordinary object but it is magically
+              enchanted.
+              This bewitched cup can transport you to a safe place out of this labyrinth”
+
+            </i> </b>
+        </p>
+        <p class="lead mb-4 text-md-left"> Go through the letters hidden in the maze to find the correct word that will
+          lead you to the Wizard cup and finally you can escape.
+        </p>
+
+        <p class="lead mb-4 text-md-left"><b> What is the correct word that leads you to the Wizard Cup?
+
+          </b></p>
+
+
+
         <div class="row">
-          <img src="images/p6.png" alt="note">
+          <img src="images/p6.png" alt="note" height="800px" width="700px">
         </div>
-        <p> <br><b>What is the correct word that leads you to the Wizard Cup? 
-          </b> </p><br>
-
-
         <div class="text-light px-4 pt-5 my-5 text-center" id="afterAns" style="display: none;">
           <h1 class="display-4 fw-bold font-harry"></h1>
           <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4"> Great! Professor Moody is one of the best teachers to teach Defence Against
-              Dark Arts, you can learn many spells to fight against the bad wizards.
+            <p class="lead mb-4">
 
             </p>
-            <button type="button" class="btn btn-success btn-lg px-4 me-md-4" onclick="window.location.href='#'">Next
+            <button type="button" class="btn btn-success btn-lg px-4 me-md-4"
+              onclick="window.location.href='\rriddle-5-3.html'">Next
               Riddle</button>
             <!-- </div> -->
           </div>
 
         </div>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5" id="int" style="display: block;">
-
-          <input type="text" placeholder="Your Answer" class="form-control" id="answer" />
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-4" onclick=" check()">Check</button>
+        <br>
+        <div class="row mb-5 justify-content-sm-center" id="anscheck">
+          <div class="col-md-8">
+            <input type="text" placeholder="Your Answer" class="form-control" id="answer" />
+          </div>
+          <div class="col-md-2">
+            <button type="button" class="btn btn-primary   me-md-4" onclick=" check()">Check</button>
+          </div>
         </div>
-
-
       </div>
 
+
+
+    </div>
+
+    <button type="button" class="float" onclick=" Hint()">?</button>
+    <!-- <i class="s"></i>
+      </a> -->
   </section>
 
-
-
+  <br style="clear: both" />
 
 
 
   <script>
+
+
 
     $(document).ready(function () {
 
@@ -236,12 +260,11 @@
     function check() {
       let answer = $("#answer").val()
       var x = document.getElementById("afterAns");
-      var y = document.getElementById("int");
 
-      if (answer == "Portkey") {
+      if (answer == "portkey") {
 
         x.style.display = "block";
-        y.style.display = "none";
+        $("#anscheck").hide()
         x.scrollIntoView();
         //return location.href = "second-riddle.html"
       }
@@ -253,7 +276,10 @@
       }
     }
 
+    function Hint() {
 
+      alert("Ask Harry Potter")
+    }
   </script>
 
 </body>

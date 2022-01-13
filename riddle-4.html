@@ -89,10 +89,7 @@
             </div>
             <div class="dmx3DFlipPhotoBack">
               <h4>Ron Weasley</h4>
-              <p>You need to navigate through the mountains from the ‘Start 4.8’, and traverse according to the
-                directions, but check for the clue of directions carefully in the image.
-
-                2. At the top notice the directions left=right and right up = left down and so on, these are the actual
+              <p>At the top notice the directions left=right and right up = left down and so on, these are the actual
                 directions you need to navigate.
               </p>
             </div>
@@ -132,7 +129,7 @@
       <h1 class="display-4 fw-bold text-center font-harry">Triwizard Competition </h1><br>
       <h3 class="display-4 fw-bold text-center font-harry">The Golden Egg </h3><br>
       <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4 text-md-left">It’s Now time for the great Triwizard competition.
+        <p class="lead mb-4 text-md-left">Now it’s time for the great Triwizard competition.
           In this Triwizard Competition you need to complete two tasks in order to be the Champion.
 
 
@@ -167,8 +164,7 @@
 
             </p>
             <button type="button" class="btn btn-success btn-lg px-4 me-md-4"
-              onclick="window.location.href='\rriddle-4-1.html'">Next
-              Riddle</button>
+              onclick="window.location.href='\rriddle-4-1.html'">Continue</button>
             <!-- </div> -->
           </div>
 
@@ -265,7 +261,7 @@
       let answer = $("#answer").val()
       var x = document.getElementById("afterAns");
 
-      if (answer == "2.3") {
+      if (answer.trim().toLowerCase() == "2.3") {
 
         x.style.display = "block";
         $("#anscheck").hide()

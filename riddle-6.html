@@ -261,7 +261,7 @@
       let answer = $("#answer").val()
       var x = document.getElementById("afterAns");
 
-      if (answer == "portkey") {
+      if (answer.trim().toLowerCase() == "portkey") {
 
         x.style.display = "block";
         $("#anscheck").hide()

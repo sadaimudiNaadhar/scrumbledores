@@ -124,7 +124,7 @@
 
   <section id="p1-content" class="fademe" style="opacity: 0;">
     <div class="text-light px-4 pt-5 my-5  border-bottom">
-      <h1 class="display-4 fw-bold text-center font-harry">Faders Dorf</h1>
+      <h1 class="display-4 fw-bold text-center font-harry">Quidditch Tournament</h1>
       <div class="col-lg-6 mx-auto">
         <p class="lead mb-4 text-md-left">Quidditch Tournament is an international Quidditch Tournament held every four years. The
           first Quidditch Tournament was held in 1473, with the final match being Transylvania v Flanders (PS11, QA8).
@@ -252,7 +252,7 @@
       let answer = $("#answer").val()
       var x = document.getElementById("afterAns");
 
-      if (answer == "bg") {
+      if (answer.trim().toLowerCase() == "bg") {
 
         x.style.display = "block";
         $("#anscheck").hide()

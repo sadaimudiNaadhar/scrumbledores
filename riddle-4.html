@@ -18,7 +18,7 @@
 
 <body>
   <header>
-    <div class="wrapper"> <img src="images/logo3.png"  />
+    <div class="wrapper"> <img src="images/logo3.png" />
       <nav>
         <a href="#" class="button button-black">
           <span>Home</span> </a> <a href="#" class="button button-black">
@@ -142,6 +142,7 @@
         <p class="lead mb-4 text-md-left"> Professor Crouch hands you over a bag to choose smaller representations of
           dragons, and the similar Real
           dragons will be guarding their eggs,
+          <br />
           He instructs: “Your Objective is simple, to collect the Golden Egg; this you must do for each egg contains a
           clue without which you cannot hope to proceed to the next task”
 
@@ -161,7 +162,7 @@
           <h1 class="display-4 fw-bold font-harry"></h1>
           <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">
-
+              Great! You are doing wonderful!
             </p>
             <button type="button" class="btn btn-success btn-lg px-4 me-md-4"
               onclick="window.location.href='\rriddle-4-1.html'">Continue</button>
@@ -182,6 +183,10 @@
 
 
 
+    </div>
+
+    <div id="overlay" onclick="offHint()">
+      <div id="textHint"></div>
     </div>
 
     <button type="button" class="float" onclick=" Hint()">?</button>
@@ -272,13 +277,26 @@
 
         x.style.display = "none";
 
-        alert()
+        Hint("Sorry! Please Try Again.")
       }
     }
 
-    function Hint() {
+    function Hint(message = null) {
 
-      alert("Ask Ron Weasley")
+      if (message) {
+        $("#textHint").text(message)
+      } else {
+        $("#textHint").text("Ask Ron Weasley to help!")
+      }
+
+      document.getElementById("overlay").style.display = "block";
+      setTimeout(function () {
+        offHint()
+      }, 2500)
+    }
+
+    function offHint() {
+      document.getElementById("overlay").style.display = "none";
     }
   </script>
 

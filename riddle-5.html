@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="css/main.css" type="text/css" />
 
   <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
   <script type="text/javascript" src="js/jquery-latest.pack.js"></script>
   <script type="text/javascript" src="js/dmx3DFlipGallery.js"></script>
@@ -19,7 +20,7 @@
 
 <body>
   <header>
-    <div class="wrapper"> <img src="images/logo3.png"  />
+    <div class="wrapper"> <img src="images/logo3.png" />
       <nav>
         <a href="#" class="button button-black">
           <span>Home</span> </a> <a href="#" class="button button-black">
@@ -34,7 +35,7 @@
           <div class="dmx3DFlipPhoto">
             <div class="dmx3DFlipPhotoFront"> <a href="javascript:void(0);" target=""> <img src="images/letter-R.jpg"
                   border="0" id="img_face1" width="130" height="200" alt="face1" /> </a>
-             
+
             </div>
             <!-- <div class="dmx3DFlipPhotoBack">
               <h4>George Weasley</h4>
@@ -49,7 +50,7 @@
           <div class="dmx3DFlipPhoto">
             <div class="dmx3DFlipPhotoFront"> <a href="javascript:void(0);" target=""> <img src="images/letter-M.jpg"
                   border="0" id="img_face2" width="130" height="199" alt="face1" /> </a>
-              
+
             </div>
             <!-- <div class="dmx3DFlipPhotoBack">
               <h4>Luna Lovegood</h4>
@@ -62,7 +63,7 @@
           <div class="dmx3DFlipPhoto">
             <div class="dmx3DFlipPhotoFront"> <a href="javascript:void(0);" target=""> <img src="images/letter-H.jpg"
                   border="0" id="img_face3" width="130" height="200" alt="face1" /> </a>
-              
+
             </div>
             <!-- <div class="dmx3DFlipPhotoBack">
               <h4>Hermione Granger</h4>
@@ -75,7 +76,7 @@
           <div class="dmx3DFlipPhoto">
             <div class="dmx3DFlipPhotoFront"> <a href="javascript:void(0);" target=""> <img src="images/letter-L.jpg"
                   border="0" id="img_face4" width="130" height="200" alt="face1" /> </a>
-              
+
             </div>
             <!-- <div class="dmx3DFlipPhotoBack">
               <h4>Harry Potter</h4>
@@ -87,7 +88,7 @@
           <div class="dmx3DFlipPhoto">
             <div class="dmx3DFlipPhotoFront"> <a href="javascript:void(0);" target=""> <img src="images/letter-O.jpg"
                   border="0" id="img_face5" width="130" height="200" alt="face1" /> </a>
-              
+
             </div>
             <!-- <div class="dmx3DFlipPhotoBack">
               <h4>Ron Weasley</h4>
@@ -99,7 +100,7 @@
           <div class="dmx3DFlipPhoto">
             <div class="dmx3DFlipPhotoFront"> <a href="javascript:void(0);" target=""> <img src="images/letter-A.jpg"
                   border="0" id="img_face6" width="130" height="200" alt="face1" /> </a>
-              
+
             </div>
             <!-- <div class="dmx3DFlipPhotoBack">
               <h4>Ginevra Weasley</h4>
@@ -116,12 +117,14 @@
             </div>
             <div class="dmx3DFlipPhotoBack">
               <h4>Cho Chang</h4>
-              <p>1. I am on Vacation, check the reels for hint on my instagram page-  <a target="_blank" href="https://www.instagram.com/the_scrumbledores/"><i class="fab fa-instagram"> </i></i></a> 
-                <br/>
-                <br/>
-                <span id="hint2" style="display: none;">2. Letter A is used twice and letter O is used thrice in this word</span>                
+              <p>1. I am on Vacation, check the reels for hint on my instagram page- <a target="_blank"
+                  href="https://www.instagram.com/the_scrumbledores/"><i class="fab fa-instagram"> </i></i></a>
+                <br />
+                <br />
+                <span id="hint2" style="display: none;">2. Letter A is used twice and letter O is used thrice in this
+                  word</span>
               </p>
-              <button id="shwhintbtn" class="btn btn-warning"> Show hint 2</button>
+              <button id="shwhintbtn" class="btn btn-warning">More Hint ?</button>
             </div>
           </div>
         </div>
@@ -182,6 +185,10 @@
 
     </div>
 
+    <div id="overlay" onclick="offHint()">
+      <div id="textHint"></div>
+    </div>
+
     <button type="button" class="float" onclick=" Hint()">?</button>
     <!-- <i class="s"></i>
       </a> -->
@@ -201,9 +208,9 @@
       // $("#p1-content").fadeOut();
       // $("##p1-content").fadeOut("slow");
 
-      $("#shwhintbtn").click(function() {
-          $("#hint2").show()
-          $(this).remove()
+      $("#shwhintbtn").click(function () {
+        $("#hint2").show()
+        $(this).remove()
       });
 
 
@@ -275,13 +282,26 @@
 
         x.style.display = "none";
 
-        alert()
+        Hint("Sorry! Please Try Again.")
       }
     }
 
-    function Hint() {
+    function Hint(message = null) {
 
-      alert("Ask Hermione")
+      if (message) {
+        $("#textHint").text(message)
+      } else {
+        $("#textHint").text("Ask Hermione to help!")
+      }
+
+      document.getElementById("overlay").style.display = "block";
+      setTimeout(function () {
+        offHint()
+      }, 2500)
+    }
+
+    function offHint() {
+      document.getElementById("overlay").style.display = "none";
     }
   </script>
 

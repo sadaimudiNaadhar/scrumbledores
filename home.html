@@ -18,7 +18,7 @@
 
 <body>
   <header>
-    <div class="wrapper"> <img src="images/logo3.png"/>
+    <div class="wrapper"> <img src="images/logo3.png" />
       <nav>
         <a href="#" class="button button-black">
           <span>Home</span> </a> <a href="#" class="button button-black">
@@ -37,7 +37,7 @@
             </div>
             <div class="dmx3DFlipPhotoBack">
               <h4>George Weasley</h4>
-              <p>Each book is numbered and the answer is the correct order of numbers. In the text there is a riddle which leads you to the correct answer.</p>
+              <p>Am a Wizard.</p>
             </div>
           </div>
         </div>
@@ -99,8 +99,8 @@
             </div>
             <div class="dmx3DFlipPhotoBack">
               <h4>Ginevra Weasley</h4>
-              <p>Ginevra Molly "Ginny" Potter was a pure-blood witch, the youngest of Arthur and Molly Weasley's seven
-                children.</p>
+              <p>Each book is numbered and the answer is the correct order of numbers. In the text there is a riddle
+                which leads you to the correct answer.</p>
             </div>
           </div>
         </div>
@@ -126,15 +126,17 @@
       <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">You Are In The Faders Dorf Place. This Is The Place Where You Can Get All The Books And
           Other School Stuff. </p>
-          <p class="lead mb-4">You Start Looking For The Bookshop That Has All Books Which Were Mentioned In The Supplies List. After Some
-Time, You Pass By A Shop That Catches Your Eye That Is Selling Telescopes And Strange Silver Instruments, You
-Look Up At The Sign And It Says ‘Wiseacre’s Wizarding Equipment’ But This Is Not The Shop You Are Looking For.
-After Visiting A Few Shops When You Go Into ‘Flourish And Blott’s’, You’ll Notice Shelves Heaped To The
-Ceiling With Books Of Every Colour And Size. You Take The Supply List From Your Pocket That Came With Your
-Hogwarts Letter And Search For The Books.</p>
+        <p class="lead mb-4">You Start Looking For The Bookshop That Has All Books Which Were Mentioned In The Supplies
+          List. After Some
+          Time, You Pass By A Shop That Catches Your Eye That Is Selling Telescopes And Strange Silver Instruments, You
+          Look Up At The Sign And It Says ‘Wiseacre’s Wizarding Equipment’ But This Is Not The Shop You Are Looking For.
+          After Visiting A Few Shops When You Go Into ‘Flourish And Blott’s’, You’ll Notice Shelves Heaped To The
+          Ceiling With Books Of Every Colour And Size. You Take The Supply List From Your Pocket That Came With Your
+          Hogwarts Letter And Search For The Books.</p>
 
-          <p class="lead mb-4">Your 8 Books Stand Next To Each Other On A Shelf. 
-            To Buy All The Books You Need To Solve The Next Puzzle.</p>
+        <p class="lead mb-4">Your 8 Books Stand Next To Each Other On A Shelf.
+          To Buy All The Books You Need To Solve The Next Puzzle.</p>
+        <p class="lead mb-4">What is the correct order in which you need to buy your books?</p>
 
         <div class="row">
           <img src="images/p1.png" alt="note">
@@ -146,23 +148,14 @@ Hogwarts Letter And Search For The Books.</p>
               time
               for the Quidditch Tournament.
             </p>
-            <button type="button" class="btn btn-success btn-lg px-4 me-md-4" onclick="window.location.href='riddle-2.html'">Next
+            <button type="button" class="btn btn-success btn-lg px-4 me-md-4"
+              onclick="window.location.href='riddle-2.html'">Next
               Riddle</button>
             <!-- </div> -->
           </div>
 
         </div>
-        <div class="text-light px-4 pt-5 my-5 text-center" id="hintShow" style="display: none;">
-          <h1 class="display-4 fw-bold font-harry"></h1>
-          <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4"> Ask to George Weasley!
-            </p>
-            
-            <!-- </div> -->
-          </div>
-
-        </div>
-        <br/>
+        <br />
         <div class="row mb-5 justify-content-sm-center" id="anscheck">
           <div class="col-md-8">
             <input type="text" placeholder="Your Answer" class="form-control" id="answer">
@@ -173,10 +166,15 @@ Hogwarts Letter And Search For The Books.</p>
         </div>
       </div>
 
+      <div id="overlay" onclick="offHint()">
+        <div id="textHint"></div>
+      </div>
+
+      <button type="button" class="float" onclick="Hint()">?</button>
+
   </section>
 
   <br style="clear: both" />
-
 
 
 
@@ -252,15 +250,31 @@ Hogwarts Letter And Search For The Books.</p>
         x.style.display = "block";
         $("#anscheck").hide()
         x.scrollIntoView();
-        hintShow.style.display = "none";
+
         //return location.href = "second-riddle.html"
       }
       else {
-
         x.style.display = "none";
-        hintShow.style.display = "block";
-        hintShow.scrollIntoView();
+        Hint("Sorry! Please Try Again.")
       }
+    }
+
+    function Hint(message = null) {
+
+      if(message) {
+        $("#textHint").text(message)
+      } else {
+        $("#textHint").text("Ask Ginevra Weasley to help!")
+      }
+
+      document.getElementById("overlay").style.display = "block";
+      setTimeout(function () {
+        offHint()
+      }, 2500)
+    }
+
+    function offHint() {
+      document.getElementById("overlay").style.display = "none";
     }
 
 

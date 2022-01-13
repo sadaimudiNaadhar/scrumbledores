@@ -18,7 +18,7 @@
 
 <body>
   <header>
-    <div class="wrapper"> <img src="images/logo3.png"  />
+    <div class="wrapper"> <img src="images/logo3.png" />
       <nav>
         <a href="#" class="button button-black">
           <span>Home</span> </a> <a href="#" class="button button-black">
@@ -184,6 +184,10 @@
 
     </div>
 
+    <div id="overlay" onclick="offHint()">
+      <div id="textHint"></div>
+    </div>
+
     <button type="button" class="float" onclick=" Hint()">?</button>
     <!-- <i class="s"></i>
       </a> -->
@@ -272,13 +276,26 @@
 
         x.style.display = "none";
 
-        alert()
+        Hint("Sorry! Please Try Again.")
       }
     }
 
-    function Hint() {
+    function Hint(message = null) {
 
-      alert("Ask Harry Potter")
+      if (message) {
+        $("#textHint").text(message)
+      } else {
+        $("#textHint").text("Ask Harry Potter to help!")
+      }
+
+      document.getElementById("overlay").style.display = "block";
+      setTimeout(function () {
+        offHint()
+      }, 2500)
+    }
+
+    function offHint() {
+      document.getElementById("overlay").style.display = "none";
     }
   </script>
 

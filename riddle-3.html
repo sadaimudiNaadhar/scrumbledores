@@ -18,7 +18,7 @@
 
 <body>
   <header>
-    <div class="wrapper"> <img src="images/logo3.png"  />
+    <div class="wrapper"> <img src="images/logo3.png" />
       <nav>
         <a href="#" class="button button-black">
           <span>Home</span> </a> <a href="#" class="button button-black">
@@ -54,12 +54,12 @@
               <h4>Luna Lovegood</h4>
               <p>1. The words from the images in the note need to be replaced with the letters given in the note.
 
-                
+
               </p>
-              <button id="shwhintbtn" class="btn btn-secondary"> Show Hint</button>
-              <br/>
+              <button id="shwhintbtn" class="btn btn-secondary">More Hint?</button>
+              <br />
               <p><span id="hint2" style="display: none;">2. Ask Hermione Granger</span></p>
-              
+
             </div>
           </div>
         </div>
@@ -72,7 +72,8 @@
             </div>
             <div class="dmx3DFlipPhotoBack">
               <h4>Hermione Granger</h4>
-              <p id="hintshw2" style="display: none;">The images in row wise fashion are Tail, Staircase, Wand, Eye, Dobby. You need to substitute the
+              <p id="hintshw2" style="display: none;">The images in row wise fashion are Tail, Staircase, Wand, Eye,
+                Dobby. You need to substitute the
                 letter e.g il in Tail = Tala and subtract t; t= ala</p>
             </div>
           </div>
@@ -148,13 +149,18 @@
 
         <div class="row">
           <img src="images/p4.png" alt="note" style="display: none;">
-          <iframe style="width: 100%; height: 600px; max-height: 90vh; border-style: solid; border-width: 2px; border-color: #888" allowFullScreen="true" src="https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?frm=1&url=aHR0cHM6Ly9zYWRhaW11ZGluYWFkaGFyLmdpdGh1Yi5pby9zY3J1bWJsZWRvcmVzL2ltYWdlcy9wNC5wbmc~&nop=6&color=charcoal" title="Jigsaw Puzzle">Jigsaw Puzzle</iframe>
+          <iframe
+            style="width: 100%; height: 600px; max-height: 90vh; border-style: solid; border-width: 2px; border-color: #888"
+            allowFullScreen="true"
+            src="https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?frm=1&url=aHR0cHM6Ly9zYWRhaW11ZGluYWFkaGFyLmdpdGh1Yi5pby9zY3J1bWJsZWRvcmVzL2ltYWdlcy9wNC5wbmc~&nop=6&color=charcoal"
+            title="Jigsaw Puzzle">Jigsaw Puzzle</iframe>
         </div>
         <div class="text-light px-4 pt-5 my-5 text-center" id="afterAns" style="display: none;">
           <h1 class="display-4 fw-bold font-harry"></h1>
           <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4"><b> Great! Professor Moody is one of the best teachers to teach Defence Against Dark Arts,
-              you can learn many spells to fight against the bad wizards
+            <p class="lead mb-4"><b> Great! Professor Moody is one of the best teachers to teach Defence Against Dark
+                Arts,
+                you can learn many spells to fight against the bad wizards
               </b>
             </p>
             <button type="button" class="btn btn-success btn-lg px-4 me-md-4"
@@ -177,6 +183,10 @@
 
 
 
+    </div>
+
+    <div id="overlay" onclick="offHint()">
+      <div id="textHint"></div>
     </div>
 
     <button type="button" class="float" onclick=" Hint()">?</button>
@@ -231,10 +241,10 @@
     $(document).ready(function () {
 
 
-      $("#shwhintbtn").click(function() {
-          $("#hint2").show()
-          $(this).remove()
-          $("#hintshw2").show()
+      $("#shwhintbtn").click(function () {
+        $("#hint2").show()
+        $(this).remove()
+        $("#hintshw2").show()
       });
 
 
@@ -264,10 +274,10 @@
       let answer = $("#answer").val()
       var x = document.getElementById("afterAns");
 
-      possibleAns =  [
-        "alastor mad eye moody", 
-        "alastormadeyemoody", 
-        "alastormad eye moody", 
+      possibleAns = [
+        "alastor mad eye moody",
+        "alastormadeyemoody",
+        "alastormad eye moody",
         "alastor mad eyemoody",
         "alastormadeye moody",
         "alastor madeye moody"
@@ -280,7 +290,7 @@
         x.scrollIntoView();
         //return location.href = "second-riddle.html"
       }
-      else if (answer=="alastor mad eye moody"){
+      else if (answer == "alastor mad eye moody") {
         x.style.display = "block";
         $("#anscheck").hide()
         x.scrollIntoView();
@@ -289,13 +299,26 @@
 
         x.style.display = "none";
 
-        alert()
+        Hint("Sorry! Please Try Again.")
       }
     }
 
-    function Hint() {
+    function Hint(message = null) {
 
-      alert("Ask Luna Lovegood")
+      if (message) {
+        $("#textHint").text(message)
+      } else {
+        $("#textHint").text("Ask Luna Lovegood to help!")
+      }
+
+      document.getElementById("overlay").style.display = "block";
+      setTimeout(function () {
+        offHint()
+      }, 2500)
+    }
+
+    function offHint() {
+      document.getElementById("overlay").style.display = "none";
     }
   </script>
 
